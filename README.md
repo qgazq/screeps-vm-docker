@@ -100,6 +100,6 @@ ctrl-c twice
 `ip -4 a`
 
 Connect using steam, or
-http://<ip>:21025/authmod/password/
+http://&lt;ip&gt;:21025/authmod/password/
 
 profit?
