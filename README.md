@@ -1,5 +1,7 @@
 # screeps-vm-docker
-This is just a setup readme
+This is just a setup readme, and is a work in progress.
+It uses the screeps docker container provided by ags131 here https://github.com/ags131/docker-screeps-server
+He also provided the docker compose outline, and wrote several of the screepsmod mods https://github.com/ScreepsMods/ that are used.
 
 Download and install virtual box
 https://www.virtualbox.org/wiki/Downloads
