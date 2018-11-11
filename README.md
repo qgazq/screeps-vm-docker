@@ -10,11 +10,11 @@ https://www.ubuntu.com/download/server
 Probably get the LTS release.
 
 Run virtual box, create a VM
-8Gig Ram
-CPUs to match host
-20Gig disk
-Networking bridged
-Turn on clipboard bidirectional
+* 8Gig Ram
+* CPUs to match host
+* 20Gig disk
+* Networking bridged
+* Turn on clipboard bidirectional
 
 Attach iso to virtual box and install ubuntu
 ...
@@ -26,8 +26,8 @@ sudo reboot
 
 sudo apt install docker-compose
 
-mkdir screeps
-cd screeps
+mkdir screeps  
+cd screeps  
 copy in the docker-compose.yml:
 ```
 version: '2'
@@ -52,14 +52,14 @@ services:
       - './data/redis:/data'
 ```
 
-`sudo docker-compose up`
+`sudo docker-compose up`  
 wait, ctrl-c
 
 `sudo docker run -it --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server init`
 
 `sudo docker run --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server yarn add screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-admin-utils screepsmod-features screepsmod-gcltocpu screepsmod-history screepsmod-map-tool `
 
-sudo vi data/server/mods.json
+sudo vi data/server/mods.json  
 add into mods array
 ```javascript
     "node_modules/screepsmod-map-tool/index.js",
@@ -72,7 +72,7 @@ add into mods array
     "node_modules/screepsmod-history/index.js"
 ```
 
-sudo vi data/server/.screepsrc
+sudo vi data/server/.screepsrc  
 at the end add
 ```
 [mongo]
@@ -91,8 +91,8 @@ pass = <your password here>
 
 `sudo docker-compose up -d`
 
-`sudo docker-compose exec server npx screeps cli`
-`system.resetAllData()`
+`sudo docker-compose exec server npx screeps cli`  
+`system.resetAllData()`  
 ctrl-c twice
 
 `sudo docker-compose restart`
