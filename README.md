@@ -21,10 +21,11 @@ Run virtual box, create a VM
 Attach iso to virtual box and install ubuntu
 ...
 
-Insert guest additions disk
-Yes auto run
-type in sudo password
-sudo reboot
+Insert guest additions disk  
+![VM Devices Menu](image.png)  
+Yes auto run  
+enter the sudo password  
+reboot the vm
 
 sudo apt install docker-compose
 
