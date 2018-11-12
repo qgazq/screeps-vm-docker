@@ -52,29 +52,8 @@ Run Oracle VM VirtualBox
 * Login as screeps
 * `mkdir screeps`
 * `cd screeps`
-copy in the docker-compose.yml:
-```
-version: '2'
-services:
-  server:
-    image: 'quay.io/ags131/screeps-server'
-    volumes:
-      - './data/server:/screeps'
-    ports:
-      - 21025:21025
-    links:
-      - redis
-      - mongo
-  mongo:
-    image: mongo
-    volumes:
-      - './data/mongo/db:/data/db'
-      - './data/mongo/configdb:/data/configdb'
-  redis:
-    image: redis
-    volumes:
-      - './data/redis:/data'
-```
+* clone this repo `git clone https://github.com/qgazq/screeps-vm-docker.git`
+* copy in the docker-compose.yml from the repo `cp screeps-vm-docker/docker-compose.yml .`
 
 `sudo docker-compose up`  
 wait, ctrl-c
