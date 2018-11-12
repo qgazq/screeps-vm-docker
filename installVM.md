@@ -50,8 +50,8 @@ Get the LTS release.
 * Press enter to confirm disk has been removed
 * Let it reboot
 
-### Optionally install guest additions
-This allow copy and paste with the VM (can be handy to get commands and keys in)
+### Optionally install guest additions (recommended)
+This will allow copy and paste with the VM (can be handy to get commands and keys in)
 * Insert the virtual guess additons CD.  Devices -> Insert Guest Additions CD image...
 ![VM Devices Menu](image.png)  
 * login as screeps
