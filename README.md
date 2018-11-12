@@ -9,14 +9,25 @@ You should only need the "Windows hosts" platform package
 
 Download ubuntu iso
 https://www.ubuntu.com/download/server
-Probably get the LTS release.
+Get the LTS release.
 
-Run virtual box, create a VM
-* 8Gig Ram
-* CPUs to match host
-* 20Gig disk
-* Networking bridged
-* Turn on clipboard bidirectional
+Run Oracle VM VirtualBox, click New
+* Name and operating system, Name: Screeps Server VM, Type: Linux, Version: Ubuntu (64-bit), Next
+![VM Devices Menu](vm1.png)  
+* Memory size, 4Gig Ram, Next
+![VM Devices Menu](vm2.png)  
+* Create a virtual hard disk now, Create
+* VDI (VirtualBox Disk Image), Next
+* Dynamically allocated, Next
+* File location and size, set 20GB, Create
+* Select the Screeps Server VM and then Settings
+* General -> Advanced -> Shared Clipboard: Bidirectional
+![VM Devices Menu](vm3.png)  
+* System -> Processor: Set Processor(s) to the number of host processors
+![VM Devices Menu](vm4.png)  
+* Network -> Adapter 1 -> Attached to: Bridged Adapter
+![VM Devices Menu](vm5.png)  
+* OK
 
 Attach iso to virtual box and install ubuntu
 ...
