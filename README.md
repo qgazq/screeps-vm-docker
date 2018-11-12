@@ -49,15 +49,11 @@ Run Oracle VM VirtualBox
 * Reboot Now
 * Press enter to confirm disk has been removed
 
-
-Attach iso to virtual box and install ubuntu
-...
-
-Insert guest additions disk  
+~~Insert guest additions disk  
 ![VM Devices Menu](image.png)  
 Yes auto run  
 enter the sudo password  
-reboot the vm
+reboot the vm~~
 
 sudo apt install docker-compose
 
