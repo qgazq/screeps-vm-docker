@@ -45,20 +45,13 @@ Run Oracle VM VirtualBox
 * Select Continue to wipe the disk (don't worry its only the virtual one)
 * Enter user details, I used the following if you choose other replace them in the instructions that follow.  Remember the password! Done
 ![VM Devices Menu](vm8.png)  
-* Don't select any Snaps, we'll install docker in another step, Done
+* Select the docker Snaps, Done
 * Reboot Now
 * Press enter to confirm disk has been removed
-
-~~Insert guest additions disk  
-![VM Devices Menu](image.png)  
-Yes auto run  
-enter the sudo password  
-reboot the vm~~
-
-sudo apt install docker-compose
-
-mkdir screeps  
-cd screeps  
+* Let it reboot
+* Login as screeps
+* `mkdir screeps`
+* `cd screeps`
 copy in the docker-compose.yml:
 ```
 version: '2'
