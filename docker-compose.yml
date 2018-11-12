@@ -1,0 +1,21 @@
+version: '2'
+services:
+  server:
+    image: 'quay.io/ags131/screeps-server'
+    volumes:
+      - './data/server:/screeps'
+    ports:
+      - 21025:21025
+    links:
+      - redis
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - './data/mongo/db:/data/db'
+      - './data/mongo/configdb:/data/configdb'
+  redis:
+    image: redis
+    volumes:
+      - './data/redis:/data'
+      
