@@ -3,64 +3,26 @@ This is just a setup readme, and is a work in progress.
 It uses the screeps docker container provided by ags131 here https://github.com/ags131/docker-screeps-server
 He also provided the docker compose outline, and wrote several of the screepsmod mods https://github.com/ScreepsMods/ that are used.
 
-Download and install virtual box
-https://www.virtualbox.org/wiki/Downloads
-You should only need the "Windows hosts" platform package
+## Install VM
+[VM Installation Instructions](installVM.md)
 
-Download ubuntu iso
-https://www.ubuntu.com/download/server
-Get the LTS release.
-
-Run Oracle VM VirtualBox
-* Click New
-* Name and operating system, Name: Screeps Server VM, Type: Linux, Version: Ubuntu (64-bit), Next  
-![VM Devices Menu](vm1.png)  
-* Memory size, 4Gig Ram, Next  
-![VM Devices Menu](vm2.png)  
-* Create a virtual hard disk now, Create
-* VDI (VirtualBox Disk Image), Next
-* Dynamically allocated, Next
-* File location and size, set 20GB, Create
-* Select the Screeps Server VM and then Settings
-* General -> Advanced -> Shared Clipboard: Bidirectional  
-![VM Devices Menu](vm3.png)  
-* System -> Processor: Set Processor(s) to the number of host processors  
-![VM Devices Menu](vm4.png)  
-* Network -> Adapter 1 -> Attached to: Bridged Adapter  
-![VM Devices Menu](vm5.png)  
-* OK
-* Click Start
-* Select start-up disk, browse to the Ubuntu server iso, Start  
-![VM Devices Menu](vm6.png)  
-* Select language (only tested with English)
-* Select keyboard layout, then Done
-* Select Install Ubuntu
-* Make a note of the ip address (192.168.14.76 in the screenshot), Done  
-![VM Devices Menu](vm7.png)  
-* Proxy, leave blank (unless you need one), Done
-* Mirror, leave at the default, Done
-* Select Use An Entire Disk
-* Select the default Disk
-* Leave the default filesystem layout, Done
-* Select Continue to wipe the disk (don't worry its only the virtual one)
-* Enter user details, I used the following if you choose other replace them in the instructions that follow.  Remember the password! Done
-![VM Devices Menu](vm8.png)  
-* Select the docker Snaps, Done
-* Reboot Now
-* Press enter to confirm disk has been removed
-* Let it reboot
+## Install docker images and configure
 * Login as screeps
 * `mkdir screeps`
 * `cd screeps`
 * clone this repo `git clone https://github.com/qgazq/screeps-vm-docker.git`
 * copy in the docker-compose.yml from the repo `cp screeps-vm-docker/docker-compose.yml .`
-
-`sudo docker-compose up`  
-wait, ctrl-c
-
-`sudo docker run -it --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server init`
-
-`sudo docker run --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server yarn add screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-admin-utils screepsmod-features screepsmod-gcltocpu screepsmod-history screepsmod-map-tool `
+* `sudo docker-compose up -d`  
+* wait while the images are downloaded
+* `sudo docker-compose down`
+* wait while it stops  
+[Running](screeps1.png)
+* `sudo docker run -it --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server init`
+* wait while it build screeps
+* Visit [https://steamcommunity.com/dev/apikey](https://steamcommunity.com/dev/apikey) and get an API Key
+* Enter it into the prompt
+* Don't try and type "screeps start" to launch your server! (well you can try but it won't work)
+* `sudo docker run --rm -v $PWD/data/server:/screeps quay.io/ags131/screeps-server yarn add screepsmod-mongo screepsmod-auth screepsmod-tickrate screepsmod-admin-utils screepsmod-features screepsmod-gcltocpu screepsmod-history screepsmod-map-tool`
 
 sudo vi data/server/mods.json  
 add into mods array
