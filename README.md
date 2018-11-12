@@ -11,7 +11,8 @@ Download ubuntu iso
 https://www.ubuntu.com/download/server
 Get the LTS release.
 
-Run Oracle VM VirtualBox, click New
+Run Oracle VM VirtualBox
+* Click New
 * Name and operating system, Name: Screeps Server VM, Type: Linux, Version: Ubuntu (64-bit), Next  
 ![VM Devices Menu](vm1.png)  
 * Memory size, 4Gig Ram, Next  
@@ -28,6 +29,26 @@ Run Oracle VM VirtualBox, click New
 * Network -> Adapter 1 -> Attached to: Bridged Adapter  
 ![VM Devices Menu](vm5.png)  
 * OK
+* Click Start
+* Select start-up disk, browse to the Ubuntu server iso, Start  
+![VM Devices Menu](vm6.png)  
+* Select language (only tested with English)
+* Select keyboard layout, then Done
+* Select Install Ubuntu
+* Make a note of the ip address (192.168.14.76 in the screenshot), Done  
+![VM Devices Menu](vm7.png)  
+* Proxy, leave blank (unless you need one), Done
+* Mirror, leave at the default, Done
+* Select Use An Entire Disk
+* Select the default Disk
+* Leave the default filesystem layout, Done
+* Select Continue to wipe the disk (don't worry its only the virtual one)
+* Enter user details, I used the following if you choose other replace them in the instructions that follow.  Remember the password! Done
+![VM Devices Menu](vm8.png)  
+* Don't select any Snaps, we'll install docker in another step, Done
+* Reboot Now
+* Press enter to confirm disk has been removed
+
 
 Attach iso to virtual box and install ubuntu
 ...
