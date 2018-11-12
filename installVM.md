@@ -1,15 +1,16 @@
-# screeps-vm-docker
+# screeps-vm-docker Virtual Machine Setup
 This creates a VM with docker ready for the screeps server to run in
 
-Download and install virtual box
+## Download and install virtual box
 https://www.virtualbox.org/wiki/Downloads
 You should only need the "Windows hosts" platform package
 
-Download ubuntu iso
+## Download ubuntu iso
 https://www.ubuntu.com/download/server
 Get the LTS release.
 
-Run Oracle VM VirtualBox
+## Run Oracle VM VirtualBox
+### Create VM
 * Click New
 * Name and operating system, Name: Screeps Server VM, Type: Linux, Version: Ubuntu (64-bit), Next  
 ![VM Devices Menu](vm1.png)  
@@ -27,6 +28,7 @@ Run Oracle VM VirtualBox
 * Network -> Adapter 1 -> Attached to: Bridged Adapter  
 ![VM Devices Menu](vm5.png)  
 * OK
+### Install Ubuntu into VM
 * Click Start
 * Select start-up disk, browse to the Ubuntu server iso, Start  
 ![VM Devices Menu](vm6.png)  
