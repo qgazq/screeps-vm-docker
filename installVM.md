@@ -50,13 +50,16 @@ Get the LTS release.
 * Press enter to confirm disk has been removed
 * Let it reboot
 
-### Optionally install guest additions (recommended)
-This will allow copy and paste with the VM (can be handy to get commands and keys in)
+### Optionally install guest additions
+This should allow copy and paste with the VM (can be handy to get commands and keys in).
+However this doesn't seem to work in the server version
 * Insert the virtual guess additons CD.  Devices -> Insert Guest Additions CD image...
 ![VM Devices Menu](image.png)  
 * login as screeps
 * `sudo apt install build-essential`
 * Press enter for Y
+* `sudo add-apt-repository universe`
+* `sudo apt install gpm`
 * `sudo mount /dev/cdrom /mnt`
 * `cd /mnt`
 * `sudo ./VBoxLinuxAdditions.run`
