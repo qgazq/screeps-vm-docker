@@ -49,3 +49,16 @@ Get the LTS release.
 * Reboot Now
 * Press enter to confirm disk has been removed
 * Let it reboot
+
+### Optionally install guest additions
+This allow copy and paste with the VM (can be handy to get commands and keys in)
+* Insert the virtual guess additons CD.  Devices -> Insert Guest Additions CD image...
+![VM Devices Menu](image.png)  
+* login as screeps
+* `sudo apt install build-essential`
+* Press enter for Y
+* `sudo mount /dev/cdrom /mnt`
+* `cd /mnt`
+* `sudo ./VBoxLinuxAdditions.run`
+* `sudo reboot`
+
