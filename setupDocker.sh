@@ -34,12 +34,10 @@ sudo cp $PWD/.screepsrc data/server/
 
 sudo docker-compose up -d
 
-sudo docker-compose exec server npx screeps cli
+echo sudo docker-compose exec server npx screeps cli
 #system.resetAllData()
 #ctrl-c twice
 
-sudo docker-compose restart
+echo sudo docker-compose restart
 
 ip -4 a | grep enp | grep inet
-
-
