@@ -64,7 +64,7 @@ ctrl-c twice
 
 `ip -4 a`
 
-Connect using steam, or
-http://&lt;ip&gt;:21025/authmod/password/
+Connect using steam, or connect to 
+http://&lt;ip&gt;:21025/authmod/password/ and use steam to set a password then use grunt (etc) to upload code
 
 profit?
